@@ -52,7 +52,7 @@ function updatePlotly(selectedSample) {
         mode: 'markers',
         marker: {
             size: sample_values,
-            color: otu_ids,  // Use otu_ids for marker colors
+            color: otu_ids,  
             colorscale: 'Bluered'
         },
         text: otu_labels
@@ -64,7 +64,6 @@ function updatePlotly(selectedSample) {
         yaxis: { title: '' }
     };
 
-    // Use Plotly.react for updates to avoid creating new plots each time
     Plotly.react("bubble", [trace1], layout);
 }
 init();
